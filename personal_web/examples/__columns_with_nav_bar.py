@@ -4,6 +4,20 @@ import personal_web.components.sidebar as sidebar
 
 from personal_web import styles
 
+height_navbar = ["80px", "80px", "80px", "80px", "0px", "0px"]
+
+display_navbar = ["flex", "flex", "flex", "flex", "none", "none"]
+display_sidebar = ["none", "none", "none", "none", "flex", "flex"]
+display_right_sidebar = ["none", "none", "none", "flex", "flex", "flex"]
+
+margin_top_sidebar = ["80px", "80px", "80px", "80px", "0px", "0px"]
+margin_top_content = ["80px", "80px", "80px", "80px", "0px", "0px"]
+margin_top_right_sidebar = ["80px", "80px", "80px", "80px", "0px", "0px"]
+
+width_sidebar = ["0%", "0%", "0%", "0%", "24%", "24%"]
+width_content = ["100%", "100%", "100%", "75%", "58%", "58%"]
+width_right_sidebar = ["0%", "0%", "0%", "25%", "18%", "18%"]
+
 @rx.page(
     route="/",
     title="Home"
@@ -15,8 +29,8 @@ def index() -> rx.Component:
                 rx.text("navbar"),
             ),
             width="100%",
-            height=["80px", "80px", "80px", "80px", "0px", "0px"],
-            display=["flex", "flex", "flex", "flex", "none", "none"],
+            height=height_navbar,
+            display=display_navbar,
             z_index="5",
             top="0px",
             position="fixed",
@@ -49,10 +63,10 @@ def index() -> rx.Component:
                     background_color="#87CEFA",
                     width="24%"
                 ),
-                margin_top="80px",
-                width="24%",
+                margin_top=margin_top_sidebar,
+                width=width_sidebar,
                 height="100%",
-                display=["none", "none", "none", "none", "flex", "flex"],
+                display=display_sidebar,
                 flex_shrink=0,
             ),
             rx.box(
@@ -60,8 +74,8 @@ def index() -> rx.Component:
                     rx.text("content"),
                     height="1000em"
                 ),
-                margin_top="80px",
-                width=["100%", "100%", "100%", "66%", "58%", "58%"],  # if right_sidebar else "100%",
+                margin_top=margin_top_content,
+                width=width_content,
                 height="100%",
                 background_color="#EEEEEE",
             ),
@@ -78,10 +92,10 @@ def index() -> rx.Component:
                     # overflow="hidden",
                     background_color="#87CEFA",
                 ),
-                margin_top="80px",
-                width="18%",
+                margin_top=margin_top_right_sidebar,
+                width=width_right_sidebar,
                 height="100%",
-                display=["none", "none", "none", "flex", "flex", "flex"],  # if right_sidebar else "none",
+                display=display_right_sidebar,
                 flex_shrink=0,
             ),
             # max_width="110em",
@@ -95,45 +109,4 @@ def index() -> rx.Component:
         ),
         justify="center",
         spacing="2"
-    )
-    # Welcome Page (Index)
-    # return rx.hstack(
-    #     # Sidebar
-    #     rx.box(
-    #         sidebar.sidebar(),
-    #         rx.box(
-    #             rx.menu.root(
-    #                 rx.menu.trigger(
-    #                     rx.button(
-    #                         rx.icon("menu"),
-    #                         variant="soft",
-    #                     )
-    #                 ),
-    #                 rx.menu.content(
-    #                     menu_item_link("Coding", "/coding"),
-    #                     menu_item_link("Projects", "/projects"),
-    #                     menu_item_link("About", "/about")
-    #                 )
-    #             ),
-    #             leading="2em",
-    #             top="2em",
-    #             z_index="500",
-    #             display=["flex", "flex", "none", "none", "none"],
-    #         )
-    #     ),
-    #     # Main content
-    #     rx.text("Home")
-    # )
-def menu_item_link(text, href):
-    return rx.menu.item(
-        rx.link(
-            text,
-            href=href,
-            width="100%",
-            color="inherit",
-        ),
-        _hover={
-            "color": styles.accent_color,
-            "background_color": styles.accent_text_color,
-        },
     )
