@@ -1,5 +1,6 @@
 import reflex as rx
 
+from reflex.style import toggle_color_mode
 from ..components import layout_metrics as layout
 from ..components import sidebar
 
@@ -55,6 +56,7 @@ def menu() -> rx.Component:
                 sidebar.sidebar_item("Coding", "/coding"),
                 sidebar.sidebar_item("Projects", "/projects"),
                 sidebar.sidebar_item("About", "/about"),
+                color(),
                 rx.popover.close(
                     rx.button("Close"),
                 ),
@@ -62,6 +64,33 @@ def menu() -> rx.Component:
                 spacing="3",
                 width="240px"
             ),
+            background=rx.color_mode_cond(light="#FEFCFB", dark="#1E160F")
         ),
         modal=True,
     )
+
+
+button_style = {
+    "border_radius": "50px",
+    "border": f"1px solid {rx.color('mauve', 4)}",
+    "background": rx.color('mauve', 2),
+    "box_shadow": "0px 3px 7px -4px rgba(21, 18, 44, 0.15)",
+    "padding": "7px 12px 7px 12px",
+    "align_items": "center",
+}
+
+
+def color() -> rx.Component:
+    return rx.flex(
+            rx.color_mode.icon(
+                light_component=rx.icon("sun", color=rx.color("mauve", 9)),
+                dark_component=rx.icon("moon", color=rx.color("mauve", 9)),
+            ),
+            on_click=toggle_color_mode,
+            _hover = {
+                "cursor" : "pointer"
+            },
+            padding="7px",
+            style=button_style,
+            border_radius="8px",
+        )
