@@ -32,8 +32,6 @@ def page(
         def templated_page():
             return rx.flex(
                 nav_bar.navbar(),
-                rx.spacer(),
-                rx.spacer(),
                 rx.flex(
                     sidebar.sidebar(),
                     rx.box(
@@ -50,7 +48,6 @@ def page(
                     width="100%",
                     spacing="4",
                 ),
-                direction="column",
                 justify="center",
                 spacing="2",
                 background_color=rx.color_mode_cond(light="#fffcf5", dark="#1E160F")
