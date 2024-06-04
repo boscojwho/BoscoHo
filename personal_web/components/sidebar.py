@@ -1,6 +1,7 @@
 from personal_web import styles
-
+from ..components import layout_metrics as layout
 import reflex as rx
+
 
 def sidebar() -> rx.Component:
     return rx.box(
@@ -8,9 +9,18 @@ def sidebar() -> rx.Component:
             sidebar_item("Coding", "/coding"),
             sidebar_item("Projects", "/projects"),
             sidebar_item("About", "/about"),
+            direction="column",
+            position="fixed",
+            spacing="2",
+            width="24%"
         ),
-        display=["none", "none", "flex", "flex", "flex"],
+        margin_top=layout.margin_top_sidebar,
+        width=layout.width_sidebar,
+        height="100%",
+        display=layout.display_sidebar,
+        flex_shrink=0,
     )
+
 
 def sidebar_item(text: str, url: str) -> rx.Component:
     """Sidebar item.
@@ -24,7 +34,7 @@ def sidebar_item(text: str, url: str) -> rx.Component:
     """
     # Whether the item is active.
     active = (rx.State.router.page.path == url.lower()) | (
-        (rx.State.router.page.path == "/") & text == "Home"
+            (rx.State.router.page.path == "/") & text == "Home"
     )
 
     return rx.link(
