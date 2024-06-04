@@ -6,7 +6,7 @@ import reflex as rx
 def sidebar() -> rx.Component:
     return rx.box(
         rx.vstack(
-            sidebar_header_item("Home", "/"),
+            # sidebar_header_item("Home", "/"),
             sidebar_item("Coding", "/coding"),
             sidebar_item("Projects", "/projects"),
             sidebar_item("About", "/about"),

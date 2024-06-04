@@ -6,7 +6,7 @@ from ..components import layout_metrics as layout
 def navbar() -> rx.Component:
     return rx.flex(
         rx.hstack(
-            rx.text("navbar"),
+            home()
         ),
         width="100%",
         height=layout.height_navbar,
@@ -16,5 +16,22 @@ def navbar() -> rx.Component:
         position="fixed",
         align_items="center",
         direction="column",
-        background_color="#AAAAAA",
+        # background_color="#AAAAAA",
+    )
+
+
+def home() -> rx.Component:
+    return rx.link(
+        rx.hstack(
+            rx.text(
+                "Home",
+            ),
+            bg="transparent",
+            align="center",
+            # border_radius=styles.border_radius,
+            width="100%",
+            # padding="1em",
+        ),
+        href="/",
+        width="100%",
     )
