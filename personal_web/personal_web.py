@@ -12,7 +12,7 @@ class State(rx.State):
 
 app = rx.App(
     theme=rx.theme(
-        appearance="inherit",
+        appearance="light",
         has_background=True,
         radius="large",
         accent_color="orange",
