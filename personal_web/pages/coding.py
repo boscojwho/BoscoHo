@@ -3,8 +3,8 @@ from ..templates import template
 
 
 @template.page(
-    route="/",
-    title="Home",
+    route="/coding",
+    title="Coding",
 )
 def coding() -> rx.Component:
     return rx.text("Coding")

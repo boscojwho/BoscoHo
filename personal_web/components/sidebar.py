@@ -6,6 +6,7 @@ import reflex as rx
 def sidebar() -> rx.Component:
     return rx.box(
         rx.vstack(
+            sidebar_header_item("Home", "/"),
             sidebar_item("Coding", "/coding"),
             sidebar_item("Projects", "/projects"),
             sidebar_item("About", "/about"),
@@ -19,6 +20,23 @@ def sidebar() -> rx.Component:
         height="100%",
         display=layout.display_sidebar,
         flex_shrink=0,
+    )
+
+
+def sidebar_header_item(text: str, url: str) -> rx.Component:
+    return rx.link(
+        rx.hstack(
+            rx.text(
+                text,
+            ),
+            bg="transparent",
+            align="center",
+            # border_radius=styles.border_radius,
+            width="100%",
+            # padding="1em",
+        ),
+        href=url,
+        width="100%",
     )
 
 
