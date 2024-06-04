@@ -17,5 +17,6 @@ def about() -> rx.Component:
             rx.text.strong("python"),
             as_="p",
         ),
-        direction="column"
+        direction="column",
+        spacing="2"
     )
