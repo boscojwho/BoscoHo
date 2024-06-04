@@ -12,8 +12,8 @@ def sidebar() -> rx.Component:
             sidebar_item("About", "/about"),
             direction="column",
             position="fixed",
-            spacing="2",
-            width="24%"
+            # spacing="2",
+            width="24%",
         ),
         margin_top=layout.margin_top_sidebar,
         width=layout.width_sidebar,
@@ -59,21 +59,30 @@ def sidebar_item(text: str, url: str) -> rx.Component:
         rx.hstack(
             rx.text(
                 text,
+                bg=rx.cond(
+                    active,
+                    rx.color("accent", 2),
+                    "transparent",
+                ),
+                padding="8px",
+                border_radius="4px"
             ),
-            bg=rx.cond(
-                active,
-                rx.color("accent", 2),
-                "transparent",
-            ),
+
             color=rx.cond(
                 active,
                 styles.accent_text_color,
                 styles.text_color,
             ),
+            # size="8",
             align="center",
             # border_radius=styles.border_radius,
             width="100%",
             # padding="1em",
+        ),
+        weight=rx.cond(
+            active,
+            "bold",
+            "medium"
         ),
         href=url,
         width="100%",

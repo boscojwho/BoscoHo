@@ -4,7 +4,7 @@ from ..components import layout_metrics as layout
 
 
 def navbar() -> rx.Component:
-    return rx.flex(
+    return rx.box(
         rx.hstack(
             home()
         ),
@@ -23,11 +23,13 @@ def navbar() -> rx.Component:
 def home() -> rx.Component:
     return rx.link(
         rx.hstack(
-            rx.text(
-                "Home",
+            rx.image(
+                src="/home_logo.png",
+                height="80px",
             ),
+            flex_direction="row",
             bg="transparent",
-            align="center",
+            align="start",
             # border_radius=styles.border_radius,
             width="100%",
             # padding="1em",
