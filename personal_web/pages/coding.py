@@ -59,5 +59,6 @@ def coding() -> rx.Component:
         ```
         
         For this to work, you still need to use the three-column API, otherwise the system will complain that there is no next column on which to present a detail view.
-        """
+        """,
+        padding="12px"
     )
