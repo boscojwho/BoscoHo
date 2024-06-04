@@ -32,6 +32,8 @@ def page(
         def templated_page():
             return rx.flex(
                 nav_bar.navbar(),
+                rx.spacer(),
+                rx.spacer(),
                 rx.flex(
                     sidebar.sidebar(),
                     rx.box(
@@ -43,12 +45,12 @@ def page(
                     sidebar_right.sidebar_right() if show_sidebar_right is True else rx.fragment(),
                     margin_left="20px",
                     margin_right="20px",
-                    margin_top="8px",
                     height="100%",
                     min_height="100vh",
                     width="100%",
                     spacing="4",
                 ),
+                direction="column",
                 justify="center",
                 spacing="2",
                 background_color=rx.color_mode_cond(light="#fffcf5", dark="#1E160F")

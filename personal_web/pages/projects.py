@@ -8,4 +8,8 @@ from ..templates import template
     show_sidebar_right=False
 )
 def projects() -> rx.Component:
-    return rx.text("Projects")
+    return rx.markdown(
+        """
+        ## HK Glyphs
+        """
+    )
