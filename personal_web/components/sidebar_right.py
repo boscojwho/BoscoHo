@@ -15,7 +15,7 @@ def sidebar_right() -> rx.Component:
             spacing="2",
             justify="start",
             # overflow="hidden",
-            background_color="#87CEFA",
+            # background_color="#87CEFA",
         ),
         margin_top=layout.margin_top_right_sidebar,
         width=layout.width_right_sidebar,
