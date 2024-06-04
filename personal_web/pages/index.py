@@ -6,11 +6,11 @@ from ..examples import __columns_with_nav_bar
 from personal_web import styles
 
 
-@rx.page(
+@template.page(
     route="/",
-    title="Home"
+    title="Home",
+    show_sidebar_right=False
 )
-@template.page
 def index() -> rx.Component:
     return rx.vstack(
         rx.text("content"),
