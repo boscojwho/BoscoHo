@@ -8,6 +8,8 @@ margin_top_sidebar = ["80px", "80px", "80px", "80px", "80px", "80px"]
 margin_top_content = ["80px", "80px", "80px", "80px", "80px", "80px"]
 margin_top_right_sidebar = ["80px", "80px", "80px", "80px", "80px", "80px"]
 
+margin_bottom_content = ["80px", "80px", "80px", "80px", "80px", "80px"]
+
 width_sidebar = ["0%", "0%", "0%", "24%", "24%", "24%"]
 width_content = ["100%", "100%", "100%", "66%", "58%", "58%"]
 width_right_sidebar = ["0%", "0%", "0%", "25%", "18%", "18%"]

@@ -37,6 +37,7 @@ def page(
                     rx.box(
                         page_content(),
                         margin_top=layout.margin_top_content,
+                        margin_bottom=layout.margin_bottom_content,
                         width=layout.width_content,
                         height="100%",
                     ),
