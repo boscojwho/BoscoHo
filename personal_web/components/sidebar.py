@@ -6,6 +6,10 @@ import reflex as rx
 def sidebar() -> rx.Component:
     return rx.box(
         rx.vstack(
+            # Adds space between nav bar home icon and first sidebar item.
+            rx.box(
+              height="32px"
+            ),
             sidebar_item("Coding", "/coding"),
             sidebar_item("Projects", "/projects"),
             sidebar_item("About", "/about"),
