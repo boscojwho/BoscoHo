@@ -1,6 +1,7 @@
 import reflex as rx
-from ..templates import template
 
+from ..templates import template
+from ..blog import _2024_navigation_split_view
 
 @template.page(
     route="/coding",
@@ -8,57 +9,20 @@ from ..templates import template
     show_sidebar_right=False
 )
 def coding() -> rx.Component:
-    return rx.markdown(
-        r"""
-        # Navigation Split View - 3 Columns
-        
-        For some reason, using split view’s three column API doesn’t work as expected on iPhone (compact size) when using non-List views. There is a workaround. [2024.04]
-        
-        ```swift
-        /// This works
-        NavigationSplitView {
-            sidebar
-        } content: {
-            List(selection...) {
-                ...
-            }
-        } detail: {
-            detail...
-        }
-        
-        /// This doesn't
-        NavigationSplitView {
-            sidebar
-        } content: {
-            CustomView... (e.g. LazyVGrid)
-        } detail: {
-            detail...
-        }
-        ```
-        
-        Turns out, you can just use `NavigationLink` and `NavigationStack` in a two-column setup, and still have it show in three columns in regular size. The system will collapse the views into a `NavigationStack` in compact size.
-
-        ```swift
-        /// Workaround
-        NavigationSplitView {
-            sidebar
-        } content: {
-            NavigationStack {
-                CustomNonListView... (e.g. LazyVGrid) {
-                    NavigationLink...
-                }
-            }
-            .navigationDestination(...) {
-                DetailView...
-            }
-        } detail: {
-            if selection == nil {
-                ContentUnavailableView...
-            }
-        }
-        ```
-        
-        For this to work, you still need to use the three-column API, otherwise the system will complain that there is no next column on which to present a detail view.
-        """,
-        padding="12px"
+    return rx.vstack(
+        rx.section(
+            rx.heading("2024"),
+            rx.link(
+                "Navigation Split View - 3 Columns",
+                href="/"
+            ),
+            size="1",
+            # padding_left="12px",
+            # padding_right="12px",
+            # background_color="var(--gray-2)",
+        ),
     )
+    # return rx.markdown(
+    #     _2024_navigation_split_view.md,
+    #     padding="12px"
+    # )
