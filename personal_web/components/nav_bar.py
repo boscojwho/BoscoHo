@@ -31,7 +31,9 @@ def home() -> rx.Component:
         rx.hstack(
             rx.image(
                 src="/home_logo.png",
-                height="80px",
+                height="120px",
+                margin_top="8px",
+                margin_left="8px"
             ),
             flex_direction="row",
             bg="transparent",
