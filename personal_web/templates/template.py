@@ -50,7 +50,8 @@ def page(
                     spacing="4",
                 ),
                 justify="center",
-                spacing="2"
+                spacing="2",
+                background_color="#fffcf5"
             )
 
         return templated_page

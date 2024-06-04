@@ -15,7 +15,7 @@ app = rx.App(
         appearance="inherit",
         has_background=True,
         radius="large",
-        accent_color="teal",
+        accent_color="orange",
     )
 )
 app.add_page(index, route="/")
