@@ -45,14 +45,9 @@ def sidebar_item(text: str, url: str) -> rx.Component:
         rx.hstack(
             rx.text(
                 text.upper(),
-                font_family="Prompt",
+                font_family=styles.FONT_FAMILY,
+                font_weight="400",
                 font_size="1.5em",
-                bg=rx.cond(
-                    active,
-                    rx.color("accent", 2),
-                    "transparent",
-                ),
-                # paddin_top="8px",
                 border_radius="4px"
             ),
 
@@ -61,11 +56,8 @@ def sidebar_item(text: str, url: str) -> rx.Component:
                 styles.accent_text_color,
                 styles.text_color,
             ),
-            # size="8",
             align="center",
-            # border_radius=styles.border_radius,
             width="100%",
-            # padding="1em",
         ),
         weight=rx.cond(
             active,
@@ -74,4 +66,5 @@ def sidebar_item(text: str, url: str) -> rx.Component:
         ),
         href=url,
         width="100%",
+        underline="none"
     )

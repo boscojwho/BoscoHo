@@ -6,6 +6,11 @@ from .pages.index import index
 from .pages.projects import projects
 
 
+font_alfa_slab_one = "https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap"
+font_luckiest_guy = "https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap"
+font_lilita_one = "https://fonts.googleapis.com/css2?family=Lilita+One&display=swap"
+font_passion_one = "https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap"
+
 class State(rx.State):
     """Define empty state to allow access to rx.State.router."""
 
@@ -18,7 +23,7 @@ app = rx.App(
         accent_color="orange",
     ),
     stylesheets=[
-        "https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap",
+        font_luckiest_guy,
     ],
 )
 app.add_page(index, route="/")
