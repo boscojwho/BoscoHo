@@ -1,4 +1,15 @@
-md = r"""
+import reflex as rx
+from ..templates import template
+
+
+@template.page(
+    route="/blog/1",
+    title="Navigation Split View - 3 Columns",
+    show_sidebar_right=False
+)
+def markdown() -> rx.Component:
+    return rx.markdown(
+        r"""
         # Navigation Split View - 3 Columns
 
         For some reason, using split view’s three column API doesn’t work as expected on iPhone (compact size) when using non-List views. There is a workaround. [2024.04]
@@ -48,4 +59,6 @@ md = r"""
         ```
 
         For this to work, you still need to use the three-column API, otherwise the system will complain that there is no next column on which to present a detail view.
-        """
+        """,
+        padding="12px"
+    )

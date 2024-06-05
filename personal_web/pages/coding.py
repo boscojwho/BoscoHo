@@ -1,7 +1,25 @@
 import reflex as rx
 
+from typing import Dict, List
 from ..templates import template
-from ..blog import _2024_navigation_split_view
+
+
+class BlogData(rx.State):
+    blog_year: List[str] = [
+        "2024",
+    ]
+    blog_data: Dict[str, List[Dict[str, str]]] = {
+        "2024": [
+            {
+                "title": "Navigation Split View - 3 Columns",
+                "href": "/blog/1",
+                "tags": [
+                    "swift"
+                ]
+            },
+        ],
+    }
+
 
 @template.page(
     route="/coding",
@@ -9,20 +27,36 @@ from ..blog import _2024_navigation_split_view
     show_sidebar_right=False
 )
 def coding() -> rx.Component:
+    return blog_year()
+
+
+def display_year(year):
+    return rx.section(
+        rx.heading(year),
+        rx.spacer(height="4px"),
+        rx.vstack(
+            rx.foreach(
+                BlogData.blog_data[year],
+                lambda x: rx.hstack(
+                    rx.link(
+                        x["title"],
+                        href=x["href"]
+                    ),
+                    rx.foreach(
+                        x["tags"],
+                        lambda tag: rx.badge(tag),
+                    )
+                ),
+            )
+        ),
+        size="1",
+    )
+
+
+def blog_year():
     return rx.vstack(
-        rx.section(
-            rx.heading("2024"),
-            rx.link(
-                "Navigation Split View - 3 Columns",
-                href="/"
-            ),
-            size="1",
-            # padding_left="12px",
-            # padding_right="12px",
-            # background_color="var(--gray-2)",
+        rx.foreach(
+            BlogData.blog_year,
+            display_year,
         ),
     )
-    # return rx.markdown(
-    #     _2024_navigation_split_view.md,
-    #     padding="12px"
-    # )
