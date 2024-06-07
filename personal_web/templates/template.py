@@ -51,7 +51,7 @@ def page(
                 ),
                 justify="center",
                 spacing="2",
-                background_color=rx.color_mode_cond(light="#fffcf5", dark="#1E160F")
+                background_color=rx.color_mode_cond(light="#FAF9F6", dark="#1E160F")
             )
 
         return templated_page

@@ -7,7 +7,7 @@ from ..components import sidebar
 def navbar() -> rx.Component:
     return rx.box(
         rx.flex(
-            home(),
+            # home(),
             rx.spacer(),
             menu(),
             width="100%",
@@ -28,22 +28,36 @@ def navbar() -> rx.Component:
 
 def home() -> rx.Component:
     return rx.link(
-        rx.hstack(
-            rx.image(
-                src="/home_logo.png",
-                height="120px",
-                margin_top="8px",
-                margin_left="8px"
-            ),
-            flex_direction="row",
-            bg="transparent",
-            align="start",
-            # border_radius=styles.border_radius,
-            width="100%",
-            # padding="1em",
-        ),
+        home_text(),
         href="/",
         width="100%",
+    )
+
+def home_text() -> rx.Component:
+    return rx.hstack(
+        rx.text(
+            "bOSCO hO",
+            font_family="Gluten",
+            font_weight="800",
+            font_size="80px",
+            color="#000000"
+        )
+    )
+
+def home_icon() -> rx.Component:
+    return rx.hstack(
+        rx.image(
+            src="/home_logo.png",
+            height="120px",
+            margin_top="8px",
+            margin_left="8px"
+        ),
+        flex_direction="row",
+        bg="transparent",
+        align="start",
+        # border_radius=styles.border_radius,
+        width="100%",
+        # padding="1em",
     )
 
 def menu() -> rx.Component:
