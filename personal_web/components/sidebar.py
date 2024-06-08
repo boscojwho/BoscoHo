@@ -10,6 +10,7 @@ def sidebar() -> rx.Component:
                 rx.text(
                     "bOSCO",
                     text_align="right",
+                    # text_shadow="2px 2px #ff0000",
                     font_family="Gluten",
                     font_weight="800",
                     font_size="80px",
@@ -21,6 +22,7 @@ def sidebar() -> rx.Component:
                 rx.text(
                     "hO",
                     text_align="right",
+                    # text_shadow="2px 2px #ff0000",
                     font_family="Gluten",
                     font_weight="800",
                     font_size="60px",
