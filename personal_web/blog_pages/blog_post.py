@@ -1,4 +1,6 @@
 import reflex as rx
+import re
+import markdown
 
 from personal_web.templates import template
 
@@ -21,8 +23,14 @@ from personal_web.templates import template
 #     show_sidebar_right=False
 # )
 def blog_post(post: str) -> rx.Component:
-    # return rx.text(f"Title: {post}")
-    print("render ", post)
     with open(f"./blog/{post}", 'r') as file:
         md = file.read()
-    return rx.markdown(md)
+        # Manually strip metadata section:
+        # Remove everything between the first and last "---" (inclusive)
+        cleaned_content = re.sub(r"(^|\n)---(.*?)\n---", "", md, flags=re.DOTALL)
+
+        # md_meta = markdown.Markdown(extensions=['meta'])
+        # html = md_meta.convert(md)
+        # print(html)
+
+    return rx.markdown(cleaned_content)

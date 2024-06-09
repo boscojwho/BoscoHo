@@ -65,23 +65,48 @@ def blog_year():
         ),
     )
 
+
+import markdown
+
 from ..blog_pages import blog_post
+
+
 def blog_posts():
     # Get the list of all files and directories
     path = "./blog"
     dir_list = os.listdir(path)
+    blogs = {}
+    for post in dir_list:
+        with open(f"./blog/{post}", 'r') as file:
+            md = file.read()
+            md_meta = markdown.Markdown(extensions=['meta'])
+            md_meta.convert(md)
+
+            if 'title' in md_meta.Meta:
+                print("title", md_meta.Meta['title'])
+                blogs[post] = md_meta.Meta["title"]
+            else:
+                print("Key 'title' not found in md_meta.Meta")
+                blogs[post] = post
+            # print("title", md_meta.Meta['title'])
 
     return rx.section(
         rx.heading("2024"),
         rx.spacer(height="8px"),
         rx.vstack(
             rx.foreach(
-                dir_list,
-                lambda post: rx.link(
-                    post,
-                    href=f"/coding/blog/{post}"
-                ),
+                blogs,
+                post_link,
             )
         ),
         size="1",
+    )
+
+from typing import List, Dict
+
+
+def post_link(post: List) -> rx.Component:
+    return rx.link(
+        rx.text(post[1]),
+        href=f"/coding/blog/{post[0]}"
     )
