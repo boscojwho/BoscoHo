@@ -30,7 +30,7 @@ class BlogData(rx.State):
     show_sidebar_right=False
 )
 def coding() -> rx.Component:
-    return blog_year()
+    return blog_posts()
 
 
 def display_year(year):
@@ -71,12 +71,17 @@ def blog_posts():
     path = "./blog"
     dir_list = os.listdir(path)
 
-    return rx.vstack(
-        rx.foreach(
-            dir_list,
-            lambda post: rx.link(
-                post,
-                href=f"/coding/blog/{post}"
-            ),
-        )
+    return rx.section(
+        rx.heading("2024"),
+        rx.spacer(height="8px"),
+        rx.vstack(
+            rx.foreach(
+                dir_list,
+                lambda post: rx.link(
+                    post,
+                    href=f"/coding/blog/{post}"
+                ),
+            )
+        ),
+        size="1",
     )
