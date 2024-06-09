@@ -4,6 +4,7 @@ from .pages.about import about
 from .pages.coding import coding
 from .pages.index import index
 from .pages.projects import projects
+from .blog_pages import blog_post
 
 font_alfa_slab_one = "https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap"
 font_luckiest_guy = "https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap"
@@ -32,5 +33,13 @@ app.add_page(coding, route="/coding")
 app.add_page(projects, route="/projects")
 
 from .blog_pages import blog_post_1
+import os
+
+path = "./blog"
+dir_list = os.listdir(path)
+
+for post in dir_list:
+    print(post)
+    app.add_page(blog_post.blog_post, route=f"/coding/blog/{post}")
 
 app.add_page(blog_post_1.markdown, route="/coding/blog_pages/1")
