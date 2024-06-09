@@ -14,6 +14,7 @@ def sidebar() -> rx.Component:
                     font_family="Gluten",
                     font_weight="800",
                     font_size="80px",
+                    font_variation_settings="'slnt' 0",
                     letter_spacing="-2px",
                     color=styles.accent_text_color,
                     line_height="0.8",
@@ -26,6 +27,7 @@ def sidebar() -> rx.Component:
                     font_family="Gluten",
                     font_weight="800",
                     font_size="60px",
+                    font_variation_settings="'slnt' 0",
                     letter_spacing="-2px",
                     color=styles.accent_text_color,
                     line_height="0.8",
@@ -89,9 +91,10 @@ def sidebar_item(text: str, url: str) -> rx.Component:
                 font_family=styles.FONT_FAMILY,
                 font_weight="600",
                 font_size="2em",
+                font_variation_settings="'slnt' 0",
                 border_radius="4px",
                 line_height="0.8",
-                _hover={"color": "red"}
+                _hover={"color": "red"},
             ),
 
             color=rx.cond(
@@ -119,5 +122,6 @@ def sidebar_item_small(text: str) -> rx.Component:
         font_family=styles.FONT_FAMILY,
         font_weight="300",
         font_size="1em",
+        font_variation_settings="'slnt' 0",
         line_height="0.9",
     )
