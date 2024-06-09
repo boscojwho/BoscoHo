@@ -38,8 +38,14 @@ import os
 path = "./blog"
 dir_list = os.listdir(path)
 
+from .templates import template
+
 for post in dir_list:
-    print(post)
-    app.add_page(blog_post.blog_post, route=f"/coding/blog/{post}")
+    # See reflex-web/pcweb/pages/blog/blog.py
+    # This is how we can pass props into a rx.component.
+    template.page(route=f"/coding/blog/{post}", title="Blog Post", show_sidebar_right=False)(
+        lambda: blog_post.blog_post(post)
+    )
+    # app.add_page(blog_post.blog_post, route=f"/coding/blog/{post}")
 
 app.add_page(blog_post_1.markdown, route="/coding/blog_pages/1")

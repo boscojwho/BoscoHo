@@ -15,7 +15,7 @@ class BlogData(rx.State):
         "2024": [
             {
                 "title": "Navigation Split View - 3 Columns",
-                "href": "/blog_pages/1",
+                "href": "coding/blog_pages/1",
                 "tags": [
                     "swift"
                 ]
@@ -65,7 +65,7 @@ def blog_year():
         ),
     )
 
-
+from ..blog_pages import blog_post
 def blog_posts():
     # Get the list of all files and directories
     path = "./blog"
@@ -74,6 +74,9 @@ def blog_posts():
     return rx.vstack(
         rx.foreach(
             dir_list,
-            lambda post: rx.text(post),
+            lambda post: rx.link(
+                post,
+                href=f"/coding/blog/{post}"
+            ),
         )
     )

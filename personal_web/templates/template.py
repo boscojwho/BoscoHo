@@ -13,6 +13,7 @@ def page(
         title: str,
         show_sidebar_right=True
 ) -> Callable[[Callable[[], rx.Component]], rx.Component]:
+    print("@page", route)
     """ Decorator for defining a page.
 
     This decorator embeds content in the middle column of a three-column layout with a navigation bar (adapts to display breakpoints).
