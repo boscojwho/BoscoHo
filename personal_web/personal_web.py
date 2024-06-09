@@ -31,6 +31,6 @@ app.add_page(about, route="/about")
 app.add_page(coding, route="/coding")
 app.add_page(projects, route="/projects")
 
-from .blog import blog_post_1
+from .blog_pages import blog_post_1
 
-app.add_page(blog_post_1.markdown, route="/coding/blog/1")
+app.add_page(blog_post_1.markdown, route="/coding/blog_pages/1")

@@ -12,7 +12,7 @@ class BlogData(rx.State):
         "2024": [
             {
                 "title": "Navigation Split View - 3 Columns",
-                "href": "/blog/1",
+                "href": "/blog_pages/1",
                 "tags": [
                     "swift"
                 ]

@@ -3,7 +3,7 @@ from ..templates import template
 
 
 @template.page(
-    route="/coding/blog/1",
+    route="/coding/blog_pages/1",
     title="Navigation Split View - 3 Columns",
     show_sidebar_right=False
 )

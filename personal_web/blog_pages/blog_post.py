@@ -17,6 +17,6 @@
 #     show_sidebar_right=False
 # )
 # def blog_post() -> rx.Component:
-#     with open(f"../blog/_{BlogState.blog_post_name}.md", 'r') as file:
+#     with open(f"../blog_pages/_{BlogState.blog_post_name}.md", 'r') as file:
 #         BlogState.md = file.read()
 #     return rx.markdown(BlogState.md)
