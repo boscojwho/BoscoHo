@@ -45,7 +45,8 @@ for post in dir_list:
     # This is how we can pass props into a rx.component.
     template.page(route=f"/coding/blog/{post}", title="Blog Post", show_sidebar_right=False)(
         # Must pass `() -> rx.Component`, hence lambda function here.
-        lambda: blog_post.blog_post(post)
+        # Need to bind post to lambda function, otherwise value is incorrect (not sure why, some Python thing for sure).
+        lambda p=post: blog_post.blog_post(p)
     )
     # app.add_page(blog_post.blog_post, route=f"/coding/blog/{post}")
 
