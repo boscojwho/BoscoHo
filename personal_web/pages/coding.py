@@ -3,6 +3,9 @@ import reflex as rx
 from typing import Dict, List
 from ..templates import template
 
+# import OS module
+import os
+
 
 class BlogData(rx.State):
     blog_year: List[str] = [
@@ -55,8 +58,22 @@ def display_year(year):
 
 def blog_year():
     return rx.vstack(
+        blog_posts(),
         rx.foreach(
             BlogData.blog_year,
             display_year,
         ),
+    )
+
+
+def blog_posts():
+    # Get the list of all files and directories
+    path = "./blog"
+    dir_list = os.listdir(path)
+
+    return rx.vstack(
+        rx.foreach(
+            dir_list,
+            lambda post: rx.text(post),
+        )
     )
