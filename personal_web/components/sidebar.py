@@ -6,36 +6,7 @@ import reflex as rx
 def sidebar() -> rx.Component:
     return rx.box(
         rx.vstack(
-            rx.vstack(
-                rx.text(
-                    "bOSCO",
-                    text_align="right",
-                    # text_shadow="2px 2px #ff0000",
-                    font_family="Gluten",
-                    font_weight="800",
-                    font_size="80px",
-                    font_variation_settings="'slnt' 0",
-                    letter_spacing="-2px",
-                    color=styles.accent_text_color,
-                    line_height="0.8",
-                    width="100%",
-                ),
-                rx.text(
-                    "hO",
-                    text_align="right",
-                    # text_shadow="2px 2px #ff0000",
-                    font_family="Gluten",
-                    font_weight="800",
-                    font_size="60px",
-                    font_variation_settings="'slnt' 0",
-                    letter_spacing="-2px",
-                    color=styles.accent_text_color,
-                    line_height="0.8",
-                    width="100%",
-                ),
-                spacing="0",
-                margin_top="24px",
-            ),
+            sidebar_home(),
             # Adds space between nav bar home icon and first sidebar item.
             rx.box(
               height="32px"
@@ -64,6 +35,64 @@ def sidebar() -> rx.Component:
         height="100%",
         display=layout.display_sidebar,
         flex_shrink=0,
+    )
+
+
+def sidebar_home() -> rx.Component:
+    # Whether the item is active.
+    url = "/"
+    active = (
+            (rx.State.router.page.path == url.lower())
+            | (rx.State.router.page.path == "/")
+    )
+    return rx.link(
+        rx.vstack(
+            sidebar_home_first_name("bOSCO"),
+            sidebar_home_last_name("hO"),
+            spacing="0",
+            margin_top="24px",
+            color=rx.cond(
+                active,
+                rx.color("ruby", 10),
+                styles.text_color,
+            ),
+        ),
+        href="/",
+        underline="none",
+    )
+
+
+def sidebar_home_first_name(text: str) -> rx.Component:
+    return rx.text(
+        text,
+        text_align="right",
+        # text_shadow="2px 2px #ff0000",
+        font_family="Gluten",
+        font_weight="800",
+        font_size="80px",
+        font_variation_settings="'slnt' 0",
+        letter_spacing="-2px",
+        color=styles.accent_text_color,
+        line_height="0.8",
+        width="100%",
+        _hover={"color": "red"},
+    )
+
+
+def sidebar_home_last_name(text: str) -> rx.Component:
+    return rx.text(
+        text,
+        text_align="right",
+        # text_shadow="2px 2px #ff0000",
+        font_family="Gluten",
+        font_weight="800",
+        font_size="60px",
+        font_variation_settings="'slnt' 0",
+        letter_spacing="-2px",
+        color=styles.accent_text_color,
+        line_height="0.8",
+        width="100%",
+        _hover={"color": "red"},
     )
 
 
@@ -112,7 +141,8 @@ def sidebar_item(text: str, url: str) -> rx.Component:
         # ),
         href=url,
         width="100%",
-        underline="none"
+        underline="none",
+        margin_top="2px",
     )
 
 
@@ -121,7 +151,7 @@ def sidebar_item_small(text: str) -> rx.Component:
         text.lower(),
         font_family=styles.FONT_FAMILY,
         font_weight="300",
-        font_size="1em",
+        font_size="1.1em",
         font_variation_settings="'slnt' 0",
         line_height="0.9",
     )
