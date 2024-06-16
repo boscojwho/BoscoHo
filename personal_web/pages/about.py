@@ -9,8 +9,19 @@ from ..templates import template
 )
 def about() -> rx.Component:
     return rx.flex(
-        rx.text("mastodon: sideshow_boz[@]mastodon[.]social"),
-        rx.text("github: boscojwho"),
+        rx.spacer(height="20px"),
+        rx.hstack(
+            rx.text("mastodon:"),
+            rx.link(
+                "sideshow_boz",
+                href="https://mastodon.social/@sideshow_boz")
+        ),
+        rx.hstack(
+            rx.text("github:"),
+            rx.link(
+                "boscojwho",
+                href="https://github.com/boscojwho")
+        ),
         rx.divider(),
         rx.text(
             "built with ",

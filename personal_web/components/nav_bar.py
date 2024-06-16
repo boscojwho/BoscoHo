@@ -4,15 +4,18 @@ from reflex.style import toggle_color_mode
 from ..components import layout_metrics as layout
 from ..components import sidebar
 
+from personal_web import styles
+
 def navbar() -> rx.Component:
     return rx.box(
         rx.flex(
-            # home(),
+            home(),
             rx.spacer(),
             menu(),
             width="100%",
             align="center",
-            margin_right="20px"
+            margin_left="20px",
+            margin_right="20px",
         ),
         width="100%",
         height=layout.height_navbar,
@@ -27,11 +30,62 @@ def navbar() -> rx.Component:
 
 
 def home() -> rx.Component:
-    return rx.link(
-        home_text(),
-        href="/",
-        width="100%",
+    # Whether the item is active.
+    url = "/"
+    active = (
+            (rx.State.router.page.path == url.lower())
+            | (rx.State.router.page.path == "/")
     )
+    return rx.link(
+        rx.vstack(
+            sidebar_home_first_name("bOSCO"),
+            sidebar_home_last_name("hO"),
+            spacing="0",
+            margin_top="24px",
+            color=rx.cond(
+                active,
+                rx.color("ruby", 10),
+                styles.text_color,
+            ),
+        ),
+        href="/",
+        underline="none",
+    )
+
+
+def sidebar_home_first_name(text: str) -> rx.Component:
+    return rx.text(
+        text,
+        text_align="right",
+        # text_shadow="2px 2px #ff0000",
+        font_family="Gluten",
+        font_weight="800",
+        font_size="36px",
+        font_variation_settings="'slnt' 0",
+        letter_spacing="-2px",
+        color=styles.accent_text_color,
+        line_height="0.8",
+        width="100%",
+        _hover={"color": "red"},
+    )
+
+
+def sidebar_home_last_name(text: str) -> rx.Component:
+    return rx.text(
+        text,
+        text_align="right",
+        # text_shadow="2px 2px #ff0000",
+        font_family="Gluten",
+        font_weight="800",
+        font_size="36px",
+        font_variation_settings="'slnt' 0",
+        letter_spacing="-2px",
+        color=styles.accent_text_color,
+        line_height="0.8",
+        width="100%",
+        _hover={"color": "red"},
+    )
+
 
 def home_text() -> rx.Component:
     return rx.hstack(
@@ -44,21 +98,6 @@ def home_text() -> rx.Component:
         )
     )
 
-def home_icon() -> rx.Component:
-    return rx.hstack(
-        rx.image(
-            src="/home_logo.png",
-            height="120px",
-            margin_top="8px",
-            margin_left="8px"
-        ),
-        flex_direction="row",
-        bg="transparent",
-        align="start",
-        # border_radius=styles.border_radius,
-        width="100%",
-        # padding="1em",
-    )
 
 def menu() -> rx.Component:
     return rx.popover.root(
@@ -72,7 +111,7 @@ def menu() -> rx.Component:
                 sidebar.sidebar_item("Coding", "/coding"),
                 sidebar.sidebar_item("Projects", "/projects"),
                 sidebar.sidebar_item("About", "/about"),
-                color(),
+                # color(),
                 rx.popover.close(
                     rx.button("Close"),
                 ),

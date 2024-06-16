@@ -1,12 +1,12 @@
-height_navbar = ["120px", "120px", "120px", "0px", "0px", "0px"]
+height_navbar = ["80px", "80px", "80px", "0px", "0px", "0px"]
 
 display_navbar = ["flex", "flex", "flex", "none", "none", "none"]
 display_sidebar = ["none", "none", "none", "flex", "flex", "flex"]
 display_right_sidebar = ["none", "none", "none", "flex", "flex", "flex"]
 
-margin_top_sidebar = ["120px", "120px", "120px", "0px", "0px", "0px"]
-margin_top_content = ["120px", "120px", "120px", "20px", "20px", "20px"]
-margin_top_right_sidebar = ["120px", "120px", "120px", "20px", "20px", "20px"]
+margin_top_sidebar = ["80px", "80px", "80px", "0px", "0px", "0px"]
+margin_top_content = ["80px", "80px", "80px", "20px", "20px", "20px"]
+margin_top_right_sidebar = ["80px", "80px", "80px", "20px", "20px", "20px"]
 
 margin_bottom_content = ["80px", "80px", "80px", "80px", "80px", "80px"]
 
