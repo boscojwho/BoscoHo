@@ -8,8 +8,7 @@ image: /
 
 # Unicode + Swift: How to Transform Mandarin Pinyin Diacritic Tone Marks into IPA (Numeric) Form
 
-💡 This is a brief note on how to convert Mandarin Pinyin diacritic tone marks into its numeric form.  While the concepts are applicable to programming languages that provide proper Unicode support, the code examples are written in Swift and geared towards a specific use-case on Apple platforms.
-
+> 💡 This is a brief note on how to convert Mandarin Pinyin diacritic tone marks into its numeric form.  While the concepts are applicable to programming languages that provide proper Unicode support, the code examples are written in Swift and geared towards a specific use-case on Apple platforms.
 
 ### Why
 
@@ -64,26 +63,27 @@ For our purposes, all we want is to retrieve the macron character from the compo
 
 According to Unicode, canonical mapping or 
 
-> *“equivalence is a **fundamental equivalency** between characters or sequences of characters which represent the same abstract character, and which when correctly displayed should always have the same visual appearance and behavior.” 
--* **Unicode, UAX #15, emphasis added**
+> equivalence is a **fundamental equivalency** between characters or sequences of characters which represent the same abstract character, and which when correctly displayed should always have the same visual appearance and behavior.
+> 
+> – **Unicode, UAX #15, emphasis added**
 
 Or in visual terms,
 
-![Screenshot 2024-06-13 at 5.07.29 PM.png](../assets/blog/Screenshot_2024-06-13_at_5.07.29_PM.png)
+![Screenshot 2024-06-13 at 5.07.29PM.png](/blog/Screenshot_2024-06-13_at_5_07_29_PM.png)
 
 Whereas, compatibility mapping or 
 
-> *“equivalence is a **weaker type of equivalence** between characters or sequences of characters which represent the same abstract character (or sequence of abstract characters), but which may have distinct visual appearances or behaviors.”*
+> *equivalence is a **weaker type of equivalence** between characters or sequences of characters which represent the same abstract character (or sequence of abstract characters), but which may have distinct visual appearances or behaviors.*
 > 
 > 
-> - ****Unicode, UAX #15, emphasis added**
+> – **Unicode, UAX #15, emphasis added**
 > 
 
 Some salient examples of this include,
 
-![Screenshot 2024-06-13 at 5.12.20 PM.png](../assets/blog/Screenshot_2024-06-13_at_5.12.20_PM.png)
+![Screenshot 2024-06-13 at 5.12.20PM.png](/blog/Screenshot_2024-06-13_at_5_12_20_PM.png)
 
-![Screenshot 2024-06-13 at 5.12.48 PM.png](../assets/blog/Screenshot_2024-06-13_at_5.12.48_PM.png)
+![Screenshot 2024-06-13 at 5.12.48PM.png](/blog/Screenshot_2024-06-13_at_5_12_48_PM.png)
 
 For our purposes, the logical choice is to use canonical mapping to decompose a Pinyin letter to retrieve its tone mark.  In Swift, compatibility mapping behaves the same as canonical mapping when it comes to the diacritic marks used to represent Pinyin tone marks, but your mileage may vary in other programming languages.
 

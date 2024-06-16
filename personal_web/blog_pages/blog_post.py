@@ -22,6 +22,16 @@ from personal_web.templates import template
 #     title="Blog Post",
 #     show_sidebar_right=False
 # )
+
+component_map = {
+    "blockquote": lambda text: rx.card(
+        text,
+        size="1",
+        background_color="var(--blue-2)",
+    )
+}
+
+
 def blog_post(post: str) -> rx.Component:
     with open(f"./blog/{post}", 'r') as file:
         md = file.read()
@@ -33,4 +43,7 @@ def blog_post(post: str) -> rx.Component:
         # html = md_meta.convert(md)
         # print(html)
 
-    return rx.markdown(cleaned_content)
+    return rx.markdown(
+        cleaned_content,
+        component_map=component_map
+    )
