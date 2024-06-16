@@ -45,5 +45,7 @@ def blog_post(post: str) -> rx.Component:
 
     return rx.markdown(
         cleaned_content,
+        margin_left="20px",
+        margin_right="20px",
         component_map=component_map
     )
