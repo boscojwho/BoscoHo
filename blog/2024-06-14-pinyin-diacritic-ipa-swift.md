@@ -87,18 +87,12 @@ Some salient examples of this include,
 
 For our purposes, the logical choice is to use canonical mapping to decompose a Pinyin letter to retrieve its tone mark.  In Swift, compatibility mapping behaves the same as canonical mapping when it comes to the diacritic marks used to represent Pinyin tone marks, but your mileage may vary in other programming languages.
 
-<aside>
-💡 Unicode character composition is a complex topic. For a full discussion on Unicode canonical and compatibility forms, see [https://www.unicode.org/reports/tr15/#Norm_Forms](https://www.unicode.org/reports/tr15/#Norm_Forms).
-
-</aside>
+>💡 Unicode character composition is a complex topic. For a full discussion on Unicode canonical and compatibility forms, see [https://www.unicode.org/reports/tr15/#Norm_Forms]().
 
 
 ### Code Snippets (Swift)
 
-<aside>
-💡 Note: We assume that we are only dealing with individual Pinyin readings (i.e. a single CJKV logograph for each Pinyin reading, space or comma-delimited). The logic is more complex when dealing with Pinyin prose (e.g. whole sentences or paragraphs), where the word boundaries are not immediately clear.
-
-</aside>
+>💡 Note: We assume that we are only dealing with individual Pinyin readings (i.e. a single CJKV logograph for each Pinyin reading, space or comma-delimited). The logic is more complex when dealing with Pinyin prose (e.g. whole sentences or paragraphs), where the word boundaries are not immediately clear.
 
 How to decompose a Pinyin tone mark from the base letter.
 
