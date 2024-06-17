@@ -22,11 +22,11 @@ def about() -> rx.Component:
                 "boscojwho",
                 href="https://github.com/boscojwho")
         ),
-        rx.divider(),
-        rx.text(
-            "built with ",
-            rx.text.strong("python"),
-            as_="p",
+        rx.divider(margin_top="1em", margin_bottom="1em"),
+        rx.markdown(
+            """
+            built with **python** • in vancouver 🍁
+            """
         ),
         direction="column",
         spacing="2"

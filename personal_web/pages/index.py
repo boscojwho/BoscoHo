@@ -13,5 +13,5 @@ from personal_web import styles
 )
 def index() -> rx.Component:
     return rx.vstack(
-        rx.text("🍁")
+        rx.text("🍁", size="9")
     )
