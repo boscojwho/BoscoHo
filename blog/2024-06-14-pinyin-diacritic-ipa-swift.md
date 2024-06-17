@@ -20,6 +20,7 @@ Unfortunately, Apple’s speech synthesizer appears to have trouble reproducing 
 
 This means we need a way to convert these diacritic tone marks into its IPA (numeric) form.
 
+___
 
 ### Background on Pinyin
 
@@ -45,11 +46,13 @@ Pinyin can be written in the following two forms:
 
 Generally, the latter form is used in both digital and handwritten text, while the IPA form was useful before the advent of computerized input.
 
+___
 
 ### Prior Art
 
 A quick web search returns various answers on how to convert numeric Pinyin tone marks into its diacritic forms.  But there appears to be a lack of discussion on how to convert diacritic tone marks into numeric form.  That’s what we need, so we’ll look at how to achieve that below.
 
+___
 
 ### Technical Discussion
 
@@ -89,6 +92,7 @@ For our purposes, the logical choice is to use canonical mapping to decompose a 
 
 >💡 Unicode character composition is a complex topic. For a full discussion on Unicode canonical and compatibility forms, see [https://www.unicode.org/reports/tr15/#Norm_Forms]().
 
+___
 
 ### Code Snippets (Swift)
 

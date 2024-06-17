@@ -16,6 +16,7 @@ def navbar() -> rx.Component:
             align="center",
             margin_left="20px",
             margin_right="20px",
+            margin_bottom="20px",
         ),
         width="100%",
         height=layout.height_navbar,
@@ -25,9 +26,11 @@ def navbar() -> rx.Component:
         position="fixed",
         align_items="center",
         direction="column",
-        # background_color="#AAAAAA",
+        style={
+            "backgroundColor": rx.color_mode_cond(light="rgba(250, 249, 246, 1)", dark="rgba(13, 13, 13, 0.8)"),
+            "backdropFilter": "blur(4px)"
+        }
     )
-
 
 def home() -> rx.Component:
     # Whether the item is active.
