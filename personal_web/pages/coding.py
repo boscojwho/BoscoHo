@@ -74,7 +74,7 @@ from ..blog_pages import blog_post
 def blog_posts():
     # Get the list of all files and directories
     path = "./blog"
-    dir_list = os.listdir(path)
+    dir_list = reversed(os.listdir(path))
     blogs = {}
     for post in dir_list:
         with open(f"./blog/{post}", 'r') as file:
