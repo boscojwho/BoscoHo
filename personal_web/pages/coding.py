@@ -1,10 +1,9 @@
 import reflex as rx
+import os
 
 from typing import Dict, List
 from ..templates import template
-
-# import OS module
-import os
+from ..utils import md_metadata
 
 
 class BlogData(rx.State):
@@ -66,11 +65,6 @@ def blog_year():
     )
 
 
-import markdown
-
-from ..blog_pages import blog_post
-
-
 def blog_posts():
     # Get the list of all files and directories
     path = "./blog"
@@ -79,12 +73,13 @@ def blog_posts():
     for post in dir_list:
         with open(f"./blog/{post}", 'r') as file:
             md = file.read()
-            md_meta = markdown.Markdown(extensions=['meta'])
-            md_meta.convert(md)
+            md_meta = md_metadata.md_metadata(md)
 
-            if 'title' in md_meta.Meta:
-                print("title", md_meta.Meta['title'])
-                blogs[post] = md_meta.Meta["title"]
+            print(md_meta)
+
+            if 'title' in md_meta:
+                print("title", md_meta['title'])
+                blogs[post] = md_meta["title"]
             else:
                 print("Key 'title' not found in md_meta.Meta")
                 blogs[post] = post
