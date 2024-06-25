@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+  <title>Bosco Ho</title>
+  <link>https://boscoho.ca</link>
+  <description>Swift, Web, Python, and more</description>
+  <item>
+    <title>Text Variant Preference View Modifier in SwiftUI</title>
+    <link>https://boscoho.reflex.run/coding/blog/2024-06-19-text-variant-preference-swiftui.md</link>
+    <description>
+      I stumbled upon this cute new SwiftUI view modifier called .textVariant(...) while looking for a way to scale font size to fit inside any Text view (I’m not sure which WWDC 2024 session this new API was discussed in). This new Text view modifier makes rendering text that can be formatted in various variants easier (think short or long dates, for example), without needing to use conditional views or ViewThatFits...
+      <![CDATA[<p> <a href="https://boscoho.reflex.run/coding/blog/2024-06-19-text-variant-preference-swiftui.md">Continue reading...</a> </p>]]>
+    </description>
+  </item>
+</channel>
+
+</rss>
