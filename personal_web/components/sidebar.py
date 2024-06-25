@@ -13,6 +13,7 @@ def sidebar() -> rx.Component:
             ),
             sidebar_item("Coding", "/coding"),
             rx.hstack(
+                sidebar_item_small("Blog/RSS"),
                 sidebar_item_small("Swift"),
                 sidebar_item_small("Python"),
                 sidebar_item_small("Web"),
@@ -23,7 +24,9 @@ def sidebar() -> rx.Component:
             ),
             sidebar_item("About", "/about"),
             rx.hstack(
-                sidebar_item_small("Contact"),
+                sidebar_icon_small("mail"),
+                sidebar_icon_small("message-circle-heart"),
+                sidebar_icon_small("rss"),
             ),
             direction="column",
             position="fixed",
@@ -154,4 +157,10 @@ def sidebar_item_small(text: str) -> rx.Component:
         font_size="1.1em",
         font_variation_settings="'slnt' 0",
         line_height="0.9",
+    )
+
+
+def sidebar_icon_small(icon: str) -> rx.Component:
+    return rx.flex(
+        rx.icon(icon, size=15)
     )

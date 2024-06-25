@@ -29,7 +29,25 @@ class BlogData(rx.State):
     show_sidebar_right=False
 )
 def coding() -> rx.Component:
-    return blog_posts()
+    return rx.vstack(
+        blog_posts(),
+        rx.divider(),
+        rx.hstack(
+            rx.text(""),
+            rx.spacer(),
+            rx.link(
+                rx.flex(
+                    rx.icon("rss", size=15),
+                    rx.text("rss"),
+                    direction="row",
+                    align="center",
+                    spacing="1",
+                ),
+                href="https://boscoho.reflex.run/feed.xml"
+            ),
+            width="100%",
+        ),
+    )
 
 
 def display_year(year):
