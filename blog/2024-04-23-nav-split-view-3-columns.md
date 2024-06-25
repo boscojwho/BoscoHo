@@ -4,6 +4,7 @@ date: 2024-04-23
 title: Navigation Split View - 3 Columns for Non-List Views
 description: How to setup a three-column layout in SwiftUI where content is a non-List view.
 image: /
+tags: swiftui
 ---
 
 # Navigation Split View - 3 Columns

@@ -4,6 +4,7 @@ date: 2024-06-19
 title: Text Variant Preference View Modifier in SwiftUI
 description: Simplify code for displaying text variants of formatted text in SwiftUI.
 image: /
+tags: swiftui
 ---
 
 # Text Variant Preference in SwiftUI

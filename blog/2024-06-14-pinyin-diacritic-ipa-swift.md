@@ -4,6 +4,7 @@ date: 2024-06-14
 title: Unicode + Swift - How to Transform Mandarin Pinyin Diacritic Tone Marks into IPA (Numeric) Form
 description: Use-case involving speech synthesis on Apple platforms.
 image: /
+tags: swift, unicode
 ---
 
 # Unicode + Swift: How to Transform Mandarin Pinyin Diacritic Tone Marks into IPA (Numeric) Form
