@@ -4,7 +4,7 @@ from reflex.style import toggle_color_mode
 from ..components import layout_metrics as layout
 from ..components import sidebar
 
-from personal_web import styles
+from BoscoHo import styles
 
 def navbar() -> rx.Component:
     return rx.box(

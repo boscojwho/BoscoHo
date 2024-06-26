@@ -1,4 +1,4 @@
-from personal_web import styles
+from BoscoHo import styles
 from ..components import layout_metrics as layout
 import reflex as rx
 
@@ -13,10 +13,10 @@ def sidebar() -> rx.Component:
             ),
             sidebar_item("Coding", "/coding"),
             rx.hstack(
-                sidebar_item_small("Blog/RSS"),
                 sidebar_item_small("Swift"),
                 sidebar_item_small("Python"),
                 sidebar_item_small("Web"),
+                sidebar_item_small("Blog/RSS"),
             ),
             sidebar_item("Projects", "/projects"),
             rx.hstack(

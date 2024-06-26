@@ -2,7 +2,7 @@ import reflex as rx
 import re
 import markdown
 
-from personal_web.templates import template
+from BoscoHo.templates import template
 
 
 # class BlogState(rx.State):
