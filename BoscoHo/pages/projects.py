@@ -21,11 +21,11 @@ def projects() -> rx.Component:
             ),
             rx.link(
                 rx.vstack(
-                    rx.chakra.image(src="", width="120px", height="auto", borderRadius="26.844"),
+                    rx.chakra.image(src="/chinotto_placeholder_logo.png", width="120px", height="auto", borderRadius="26.844"),
                     rx.text('Chinotto', weight="bold"),
                     align="center"
                 ),
-                href="/"
+                href="https://github.com/boscojwho/Chinotto"
             ),
             rx.link(
                 rx.vstack(
@@ -46,10 +46,12 @@ def projects() -> rx.Component:
                     rx.chakra.image(src="/mlem_logo.png", width="60px", height="auto", borderRadius="13.422"),
                     rx.text('Mlem', weight="bold"),
                     align="center"
-                )
+                ),
+                href="https://github.com/mlemgroup/mlem"
             )
         ),
         rx.divider(),
+        rx.text("Fencing", weight="medium"),
         rx.chakra.responsive_grid(
             rx.link(
                 rx.vstack(
@@ -78,7 +80,6 @@ def projects() -> rx.Component:
             columns=[4],
             spacing="4",
         ),
-        rx.text("Fencing", weight="bold"),
         rx.divider(),
         rx.chakra.responsive_grid(
             rx.link(
@@ -88,7 +89,7 @@ def projects() -> rx.Component:
                     # rx.text('Fencathon', weight="bold"),
                     align="center"
                 ),
-                href="/"
+                href="https://www.rungoapp.com/"
             ),
             columns=[4],
             spacing="4",
