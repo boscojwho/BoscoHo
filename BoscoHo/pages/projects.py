@@ -21,6 +21,14 @@ def projects() -> rx.Component:
             ),
             rx.link(
                 rx.vstack(
+                    rx.chakra.image(src="", width="120px", height="auto", borderRadius="26.844"),
+                    rx.text('Chinotto', weight="bold"),
+                    align="center"
+                ),
+                href="/"
+            ),
+            rx.link(
+                rx.vstack(
                     rx.chakra.image(src="/castro_icon.png", width="120px", height="auto", borderRadius="26.844"),
                     rx.text('Castro', weight="bold"),
                     align="center"
