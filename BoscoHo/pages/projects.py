@@ -75,10 +75,10 @@ def projects() -> rx.Component:
                 ),
                 href="/"
             ),
-            columns=[2, 3, 4],
+            columns=[4],
             spacing="4",
         ),
-        rx.text("Fencing"),
+        rx.text("Fencing", weight="bold"),
         rx.divider(),
         rx.chakra.responsive_grid(
             rx.link(
@@ -90,7 +90,7 @@ def projects() -> rx.Component:
                 ),
                 href="/"
             ),
-            columns=[2, 3, 4],
+            columns=[4],
             spacing="4",
         ),
     )

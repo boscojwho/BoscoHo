@@ -12,11 +12,21 @@ def sidebar() -> rx.Component:
               height="32px"
             ),
             sidebar_item("Coding", "/coding"),
-            rx.hstack(
-                sidebar_item_small("Swift"),
-                sidebar_item_small("Python"),
-                sidebar_item_small("Web"),
-                sidebar_item_small("Blog/RSS"),
+            rx.chakra.wrap(
+                rx.chakra.wrap_item(
+                    sidebar_item_small("Swift/Apple"),
+                ),
+                rx.chakra.wrap_item(
+                    sidebar_item_small("Python"),
+                ),
+                rx.chakra.wrap_item(
+                    sidebar_item_small("Web"),
+                ),
+                rx.chakra.wrap_item(
+                    sidebar_item_small("Blog/RSS"),
+                ),
+                spacing_x="0.85em",
+                align="center",
             ),
             sidebar_item("Projects", "/projects"),
             rx.chakra.wrap(

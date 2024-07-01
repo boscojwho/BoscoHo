@@ -34,7 +34,7 @@ def about() -> rx.Component:
         rx.divider(margin_top="1em", margin_bottom="1em"),
         rx.markdown(
             """
-            built with **python** • in vancouver 🍁
+            built with **python** • in *vancouver* 🍁
             """
         ),
         direction="column",
