@@ -3,6 +3,7 @@ name = "boscoho"
 version = "1.0.0"
 dependencies = [
     "reflex>=0.5.4",
+    "Markdown==3.6",
 ]
 requires-python = ">= 3.10"
 
