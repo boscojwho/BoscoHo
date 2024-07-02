@@ -1,5 +1,5 @@
 [project]
-name = "Bosco Ho"
+name = "boscoho"
 version = "1.0.0"
 dependencies = [
     "reflex>=0.5.4",
