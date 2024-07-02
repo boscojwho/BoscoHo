@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+  <title>Bosco Ho</title>
+  <link>https://boscoho.ca</link>
+  <description>Swift, Web, Python, and more</description>
+  <category>Swift/SwiftUI/Programming/Web/Python</category>
+  <item>
+    <title>Text Variant Preference View Modifier in SwiftUI</title>
+    <link>https://boscoho.reflex.run/coding/blog/2024-06-19-text-variant-preference-swiftui.md</link>
+    <description>
+      I stumbled upon this cute new SwiftUI view modifier called .textVariant(...) while looking for a way to scale font size to fit inside any Text view (I’m not sure which WWDC 2024 session this new API was discussed in). This new Text view modifier makes rendering text that can be formatted in various variants easier (think short or long dates, for example), without needing to use conditional views or ViewThatFits...
+      <![CDATA[<p> <a href="https://boscoho.reflex.run/coding/blog/2024-06-19-text-variant-preference-swiftui.md">Continue reading...</a> </p>]]>
+    </description>
+    <author>Bosco Ho</author>
+    <pubDate>Mon, 24 Jun 2024</pubDate>
+  </item>
+  <item>
+    <title>Unicode + Swift - How to Transform Mandarin Pinyin Diacritic Tone Marks into IPA (Numeric) Form</title>
+    <link>https://boscoho.reflex.run/coding/blog/2024-06-14-pinyin-diacritic-ipa-swift.md</link>
+    <description>
+      This is a brief note on how to convert Mandarin Pinyin diacritic tone marks into its numeric form.  While the concepts are applicable to programming languages that provide proper Unicode support, the code examples are written in Swift and geared towards a specific use-case on Apple platforms...
+      <![CDATA[<p> <a href="https://boscoho.reflex.run/coding/blog/2024-06-14-pinyin-diacritic-ipa-swift.md">Continue reading...</a> </p>]]>
+    </description>
+    <author>Bosco Ho</author>
+    <pubDate>Fri, 14 Jun 2024</pubDate>
+  </item>
+   <item>
+    <title>Navigation Split View - 3 Columns for Non-List Views</title>
+    <link>https://boscoho.reflex.run/coding/blog/2024-04-23-nav-split-view-3-columns.md</link>
+    <description>
+      For some reason, using split view’s three column API doesn’t work as expected on iPhone (compact size) when using non-List views. There is a workaround...
+      <![CDATA[<p> <a href="https://boscoho.reflex.run/coding/blog/2024-04-23-nav-split-view-3-columns.md">Continue reading...</a> </p>]]>
+    </description>
+    <author>Bosco Ho</author>
+    <pubDate>Tue, 23 Apr 2024</pubDate>
+  </item>
+</channel>
+
+</rss>
+
+<!--<item>-->
+<!--    <title>[TITLE]</title>-->
+<!--    <link>https://boscoho.reflex.run/coding/blog/[FILENAME].md</link>-->
+<!--    <description>-->
+<!--      [SUMMARY]...-->
+<!--      <![CDATA[<p> <a href="https://boscoho.reflex.run/coding/blog/[FILENAME].md">Continue reading...</a> </p>]]>-->
+<!--    </description>-->
+<!--    <author>Bosco Ho</author>-->
+<!--    <pubDate>Mon, 24 Jun 2024</pubDate>-->
+<!--</item>-->
