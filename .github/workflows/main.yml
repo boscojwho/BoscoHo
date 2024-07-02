@@ -27,7 +27,7 @@ jobs:
 
       - name: Build the website 🚧
         run: |
-          API_URL=http://app.example.com:8000 reflex export --no-zip --frontend-only
+          reflex export --no-zip --frontend-only
         env:
           API_URL: "https://boscojwho.github.io:8000"
 
