@@ -1,5 +1,5 @@
 [project]
-name = "boscoho"
+name = "BoscoHo"
 version = "1.0.0"
 dependencies = [
     "reflex>=0.5.4",
@@ -19,4 +19,4 @@ dev-dependencies = []
 allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
-packages = ["divingavran"]
+packages = ["BoscoHo"]
