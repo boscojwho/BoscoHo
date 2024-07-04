@@ -33,7 +33,10 @@ component_map = {
 
 
 def blog_post(post: str) -> rx.Component:
-    with open(f"./blog/{post}", 'r') as file:
+    """
+    post: Path to file, including filename.
+    """
+    with open(post, 'r') as file:
         md = file.read()
         # Manually strip metadata section:
         # Remove everything between the first and last "---" (inclusive)

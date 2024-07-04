@@ -46,8 +46,16 @@ for post in dir_list:
     template.page(route=f"/coding/blog/{post}", title="Blog Post", show_sidebar_right=False)(
         # Must pass `() -> rx.Component`, hence lambda function here.
         # Need to bind post to lambda function, otherwise value is incorrect (not sure why, some Python thing for sure).
-        lambda p=post: blog_post.blog_post(p)
+        lambda p=post: blog_post.blog_post(f"./blog/{p}")
     )
     # app.add_page(blog_post.blog_post, route=f"/coding/blog/{post}")
 
 app.add_page(blog_post_1.markdown, route="/coding/blog_pages/1")
+
+privacy_path = "./assets/privacy"
+privacy_files = os.listdir(privacy_path)
+
+for post in privacy_files:
+    template.page(route=f"/privacy/file/{post}", title="Privacy Policy", show_sidebar_right=False)(
+        lambda p=post: blog_post.blog_post(f"./assets/privacy/{p}")
+    )
