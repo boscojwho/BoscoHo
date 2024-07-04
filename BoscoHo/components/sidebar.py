@@ -12,15 +12,41 @@ def sidebar() -> rx.Component:
               height="32px"
             ),
             sidebar_item("Coding", "/coding"),
-            rx.hstack(
-                sidebar_item_small("Swift"),
-                sidebar_item_small("Python"),
-                sidebar_item_small("Web"),
-                sidebar_item_small("Blog/RSS"),
+            rx.chakra.wrap(
+                rx.chakra.wrap_item(
+                    sidebar_item_small("Swift/Apple"),
+                ),
+                rx.chakra.wrap_item(
+                    sidebar_item_small("Python"),
+                ),
+                rx.chakra.wrap_item(
+                    sidebar_item_small("Web"),
+                ),
+                rx.chakra.wrap_item(
+                    sidebar_item_small("Blog/RSS"),
+                ),
+                spacing_x="0.85em",
+                align="center",
             ),
             sidebar_item("Projects", "/projects"),
-            rx.hstack(
-                sidebar_item_small("HK Glyph"),
+            rx.chakra.wrap(
+                rx.chakra.wrap_item(
+                    sidebar_item_small("HK Glyph"),
+                ),
+                rx.chakra.wrap_item(
+                    sidebar_item_small("Chinotto"),
+                ),
+                rx.chakra.wrap_item(
+                    sidebar_item_small("Castro"),
+                ),
+                rx.chakra.wrap_item(
+                    sidebar_item_small("Open Source"),
+                ),
+                rx.chakra.wrap_item(
+                    sidebar_item_small("Past Projects"),
+                ),
+                spacing_x="0.85em",
+                align="center",
             ),
             sidebar_item("About", "/about"),
             rx.hstack(
@@ -30,8 +56,8 @@ def sidebar() -> rx.Component:
             ),
             direction="column",
             position="fixed",
-            spacing="1",
-            # width="34%",
+            spacing="2",
+            width=layout.width_sidebar,
         ),
         margin_top=layout.margin_top_sidebar,
         width=layout.width_sidebar,
@@ -143,9 +169,10 @@ def sidebar_item(text: str, url: str) -> rx.Component:
         #     "medium"
         # ),
         href=url,
-        width="100%",
+        width=layout.width_sidebar,
         underline="none",
-        margin_top="2px",
+        margin_top="4px",
+        margin_bottom="-6px",
     )
 
 
