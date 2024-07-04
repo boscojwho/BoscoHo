@@ -6,7 +6,9 @@ This privacy policy applies to the HK Characters app (hereby referred to as "App
 
 The Application does not gather any personally identifiable information.
 
-The Application does not gather any information about the location of your mobile device.
+The Application does not gather **any** precise or approximate information about the location of your mobile device.
+
+The Application collects usage data (e.g. “Favourites”, “Recently Viewed”), and stores this data in the User’s personal iCloud storage. 
 
 **Third Party Access**
 
@@ -14,9 +16,9 @@ Only aggregated, anonymized data is periodically transmitted to external service
 
 The Service Provider may disclose User Provided and Automatically Collected Information:
 
-*   as required by law, such as to comply with a subpoena, or similar legal process;
-*   when they believe in good faith that disclosure is necessary to protect their rights, protect your safety or the safety of others, investigate fraud, or respond to a government request;
-*   with their trusted services providers who work on their behalf, do not have an independent use of the information we disclose to them, and have agreed to adhere to the rules set forth in this privacy statement.
+- as required by law, such as to comply with a subpoena, or similar legal process;
+- when they believe in good faith that disclosure is necessary to protect their rights, protect your safety or the safety of others, investigate fraud, or respond to a government request;
+- with their trusted services providers who work on their behalf, do not have an independent use of the information we disclose to them, and have agreed to adhere to the rules set forth in this privacy statement.
 
 **Opt-Out Rights**
 
@@ -24,13 +26,13 @@ You can stop all collection of information by the Application easily by uninstal
 
 **Data Retention Policy**
 
-The Service Provider will retain User Provided data for as long as you use the Application and for a reasonable time thereafter. If you'd like them to delete User Provided Data that you have provided via the Application, please contact them at hello@boscoho.ca and they will respond in a reasonable time.
+The Service Provider will retain User Provided data for as long as you use the Application and for a reasonable time thereafter. If you'd like them to delete User Provided Data that you have provided via the Application, please contact them at [hello@boscoho.ca](mailto:hello@boscoho.ca) and they will respond in a reasonable time.
 
 **Children**
 
 The Service Provider does not use the Application to knowingly solicit data from or market to children under the age of 13.
 
-The Service Provider does not knowingly collect personally identifiable information from children. The Service Provider encourages all children to never submit any personally identifiable information through the Application and/or Services. The Service Provider encourage parents and legal guardians to monitor their children's Internet usage and to help enforce this Policy by instructing their children never to provide personally identifiable information through the Application and/or Services without their permission. If you have reason to believe that a child has provided personally identifiable information to the Service Provider through the Application and/or Services, please contact the Service Provider (hello@boscoho.ca) so that they will be able to take the necessary actions. You must also be at least 16 years of age to consent to the processing of your personally identifiable information in your country (in some countries we may allow your parent or guardian to do so on your behalf).
+The Service Provider does not knowingly collect personally identifiable information from children. The Service Provider encourages all children to never submit any personally identifiable information through the Application and/or Services. The Service Provider encourage parents and legal guardians to monitor their children's Internet usage and to help enforce this Policy by instructing their children never to provide personally identifiable information through the Application and/or Services without their permission. If you have reason to believe that a child has provided personally identifiable information to the Service Provider through the Application and/or Services, please contact the Service Provider ([hello@boscoho.ca](mailto:hello@boscoho.ca)) so that they will be able to take the necessary actions. You must also be at least 16 years of age to consent to the processing of your personally identifiable information in your country (in some countries we may allow your parent or guardian to do so on your behalf).
 
 **Security**
 
@@ -48,4 +50,4 @@ By using the Application, you are consenting to the processing of your informati
 
 **Contact Us**
 
-If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider via email at hello@boscoho.ca.
+If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider via email at [hello@boscoho.ca](mailto:hello@boscoho.ca).
