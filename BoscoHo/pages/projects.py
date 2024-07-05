@@ -17,7 +17,7 @@ def projects() -> rx.Component:
                     rx.text('HK Characters', weight="bold"),
                     align="center"
                 ),
-                href="/"
+                href="/projects/hk_characters"
             ),
             rx.link(
                 rx.vstack(
