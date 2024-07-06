@@ -4,6 +4,7 @@ from .pages.about import about
 from .pages.coding import coding
 from .pages.index import index
 from .pages.projects import projects
+from .pages import hkscs
 from .blog_pages import blog_post
 
 font_alfa_slab_one = "https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap"
@@ -31,6 +32,8 @@ app.add_page(index, route="/")
 app.add_page(about, route="/about")
 app.add_page(coding, route="/coding")
 app.add_page(projects, route="/projects")
+
+app.add_page(hkscs.index, route="/projects/hkscs")
 
 from .blog_pages import blog_post_1
 import os

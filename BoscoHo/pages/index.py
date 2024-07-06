@@ -8,7 +8,7 @@ from BoscoHo import styles
 
 @template.page(
     route="/",
-    title="Home",
+    title="Bosco Ho",
     show_sidebar_right=False
 )
 def index() -> rx.Component:
