@@ -1,7 +1,7 @@
 import reflex as rx
 from ..templates import template
 
-
+# <a href="https://apps.apple.com/us/app/hk-characters/id6502965916?itsct=apps_box_badge&amp;itscg=30200" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1720051200" alt="Download on the App Store" style="border-radius: 13px; width: 250px; height: 83px;"></a>
 @template.page(
     route="/projects/hk_characters",
     title="HK Characters",
@@ -23,7 +23,9 @@ def index() -> rx.Component:
             ),
             variant="classic",
         ),
-        rx.chakra.image(src="/hkscs_landscape.png", width="320px", height="auto", borderRadius="24"),
+        rx.chakra.image(src="/hkscs_landscape.png", width="320px",
+                        height="auto", borderRadius="24"),
+        app_store_badge(),
         hkscs_metadata(),
         collections(),
         glyph_variants(),
@@ -39,6 +41,15 @@ def index() -> rx.Component:
         spacing="4",
         align_items = "flex-start",
         flex_wrap = "wrap",
+    )
+
+
+def app_store_badge() -> rx.Component:
+    return rx.link(
+        rx.image(
+            src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1720051200",
+            width="250px", height="83px", border_radius="13px"),
+        href="https://apps.apple.com/us/app/hk-characters/id6502965916?itsct=apps_box_badge&amp;itscg=30200"
     )
 
 
