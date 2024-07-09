@@ -55,33 +55,10 @@ jobs:
           name: frontend
           path: frontend/
 
-      - name: Deploy to GitHub Pages 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: frontend/
-
-      # This part is important, otherwise GitHub Pages will try to build the website as a Jekyll website
-      - name: Checkout branch 🛎️
-        uses: actions/checkout@v4
-        with:
-          ref: gh-pages
-
-      - name: Check if .nojekyll exists 📦
-        id: check_files
-        uses: andstor/file-existence-action@v2
-        with:
-          files: ".nojekyll"
-
-      - name: Touch .nojekyll 👉
-        if: steps.check_files.outputs.files_exists == 'false'
-        run: |
-          touch .nojekyll
-
-      - name: Commit changes 📦
-        if: steps.check_files.outputs.files_exists == 'false'
-        run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add .nojekyll
-          git commit -m "Added .nojekyll"
-          git push
+      - name: GitHub Branch Deployer
+        uses: nicholasgriffintn/github-branch-deployment-action@1.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: production
+          FOLDER: frontend
+          MESSAGE: 'Build: ({sha}) {msg}'
