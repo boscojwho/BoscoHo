@@ -90,7 +90,8 @@ jobs:
       - name: GitHub Branch Deployer
         uses: nicholasgriffintn/github-branch-deployment-action@1.0.0
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # See https://github.com/marketplace/actions/github-branch-deployer for GitHub token format.
+          GITHUB_TOKEN: 'INSERT GITHUB TOKEN HERE'
           BRANCH: production
           FOLDER: frontend
           MESSAGE: 'Build: ({sha}) {msg}'
@@ -106,4 +107,5 @@ Let me know if you have any questions or comments =)
 
 ## References
 
-[https://reflex.dev/docs/hosting/self-hosting/](https://reflex.dev/docs/hosting/self-hosting/)
+- [https://reflex.dev/docs/hosting/self-hosting/](https://reflex.dev/docs/hosting/self-hosting/)
+- [https://github.com/marketplace/actions/github-branch-deployer](https://github.com/marketplace/actions/github-branch-deployer)
