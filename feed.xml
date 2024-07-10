@@ -40,7 +40,7 @@
       <title>Reflex - Self Host on Vercel with Three Simple Steps</title>
       <link>https://boscoho.ca/coding/blog/2024-07-09-reflex-self-host-vercel.md</link>
       <description>
-        [SUMMARY]...
+        Currently, Reflex does not support custom domains if you deploy to their servers.  There are some resources that discuss how to self-host your Reflex web app, but involve quite a bit of setup and web deployment knowledge. I will assume you already have some basic knowledge of Reflex and Vercel...
         <![CDATA[<p> <a href="https://boscoho.reflex.run/coding/blog/2024-07-09-reflex-self-host-vercel.md">Continue reading...</a> </p>]]>
       </description>
       <author>Bosco Ho</author>
