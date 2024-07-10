@@ -43,7 +43,7 @@ def coding() -> rx.Component:
                     align="center",
                     spacing="1",
                 ),
-                href="https://boscoho.reflex.run/feed.xml"
+                href="https://boscoho.ca/feed.xml"
             ),
             width="100%",
         ),

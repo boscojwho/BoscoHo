@@ -29,7 +29,7 @@ def about() -> rx.Component:
             rx.text("rss:"),
             rx.link(
                 "feed",
-                href="https://boscoho.reflex.run/feed.xml")
+                href="https://boscoho.ca/feed.xml")
         ),
         rx.divider(margin_top="1em", margin_bottom="1em"),
         rx.markdown(
