@@ -91,7 +91,7 @@ jobs:
         uses: nicholasgriffintn/github-branch-deployment-action@1.0.0
         env:
           # See https://github.com/marketplace/actions/github-branch-deployer for GitHub token format.
-          GITHUB_TOKEN: 'INSERT GITHUB TOKEN HERE'
+          GITHUB_TOKEN: 'INSERT [secrets.GITHUB_TOKEN] HERE'
           BRANCH: production
           FOLDER: frontend
           MESSAGE: 'Build: ({sha}) {msg}'
