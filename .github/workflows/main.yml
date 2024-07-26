@@ -29,7 +29,7 @@ jobs:
         run: |
           reflex export --no-zip --frontend-only
         env:
-          API_URL: "http://boscoho.ca:8000"
+          API_URL: "http://www.boscoho.ca:8000"
 
       - name: Upload frontend build 📦
         uses: actions/upload-artifact@v3
