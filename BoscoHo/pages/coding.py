@@ -6,21 +6,21 @@ from ..templates import template
 from ..utils import md_metadata
 
 
-class BlogData(rx.State):
-    blog_year: List[str] = [
-        "2024",
-    ]
-    blog_data: Dict[str, List[Dict[str, str]]] = {
-        "2024": [
-            {
-                "title": "Navigation Split View - 3 Columns",
-                "href": "coding/blog_pages/1",
-                "tags": [
-                    "swift"
-                ]
-            },
-        ],
-    }
+# class BlogData(rx.State):
+#     blog_year: List[str] = [
+#         "2024",
+#     ]
+#     blog_data: Dict[str, List[Dict[str, str]]] = {
+#         "2024": [
+#             {
+#                 "title": "Navigation Split View - 3 Columns",
+#                 "href": "coding/blog_pages/1",
+#                 "tags": [
+#                     "swift"
+#                 ]
+#             },
+#         ],
+#     }
 
 
 @template.page(
@@ -55,19 +55,19 @@ def display_year(year):
         rx.heading(year),
         rx.spacer(height="4px"),
         rx.vstack(
-            rx.foreach(
-                BlogData.blog_data[year],
-                lambda x: rx.hstack(
-                    rx.link(
-                        x["title"],
-                        href=x["href"]
-                    ),
-                    rx.foreach(
-                        x["tags"],
-                        lambda tag: rx.badge(tag),
-                    )
-                ),
-            )
+            # rx.foreach(
+            #     BlogData.blog_data[year],
+            #     lambda x: rx.hstack(
+            #         rx.link(
+            #             x["title"],
+            #             href=x["href"]
+            #         ),
+            #         rx.foreach(
+            #             x["tags"],
+            #             lambda tag: rx.badge(tag),
+            #         )
+            #     ),
+            # )
         ),
         size="1",
     )
@@ -76,10 +76,10 @@ def display_year(year):
 def blog_year():
     return rx.vstack(
         blog_posts(),
-        rx.foreach(
-            BlogData.blog_year,
-            display_year,
-        ),
+        # rx.foreach(
+        #     BlogData.blog_year,
+        #     display_year,
+        # ),
     )
 
 
