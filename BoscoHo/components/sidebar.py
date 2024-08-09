@@ -70,10 +70,11 @@ def sidebar() -> rx.Component:
 def sidebar_home() -> rx.Component:
     # Whether the item is active.
     url = "/"
-    active = (
-            (rx.State.router.page.path == url.lower())
-            | (rx.State.router.page.path == "/")
-    )
+    active = False
+    # (
+    #         (rx.State.router.page.path == url.lower())
+    #         | (rx.State.router.page.path == "/")
+    # )
     return rx.link(
         rx.vstack(
             sidebar_home_first_name("bOSCO"),
@@ -136,11 +137,12 @@ def sidebar_item(text: str, url: str) -> rx.Component:
         rx.Component: The sidebar item component.
     """
     # Whether the item is active.
-    active = (
-            (rx.State.router.page.path == url.lower())
-            # | (rx.State.router.page.path.find(url.lower()) != -1)
-            | ((rx.State.router.page.path == "/") & text == "Home")
-    )
+    active = False
+    # active = (
+    #         (rx.State.router.page.path == url.lower())
+    #         # | (rx.State.router.page.path.find(url.lower()) != -1)
+    #         | ((rx.State.router.page.path == "/") & text == "Home")
+    # )
 
     return rx.link(
         rx.hstack(
