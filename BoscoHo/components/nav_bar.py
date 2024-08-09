@@ -35,10 +35,11 @@ def navbar() -> rx.Component:
 def home() -> rx.Component:
     # Whether the item is active.
     url = "/"
-    active = (
-            (rx.State.router.page.path == url.lower())
-            | (rx.State.router.page.path == "/")
-    )
+    active = False
+    # active = (
+    #         (rx.State.router.page.path == url.lower())
+    #         | (rx.State.router.page.path == "/")
+    # )
     return rx.link(
         rx.vstack(
             sidebar_home_first_name("bOSCO"),
