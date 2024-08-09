@@ -13,9 +13,6 @@ font_lilita_one = "https://fonts.googleapis.com/css2?family=Lilita+One&display=s
 font_passion_one = "https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap"
 font_gluten = "https://fonts.googleapis.com/css2?family=Gluten:slnt,wght@-13..13,100..900&display=swap"
 
-class State(rx.State):
-    """Define empty state to allow access to rx.State.router."""
-
 
 app = rx.App(
     theme=rx.theme(
